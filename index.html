@@ -58,9 +58,315 @@
       </aside>
     </section>
 
-    <!-- questions -->
+    <!-- Git via CLI -->
+    <section id="git-via-cli">
+      <!-- intro -->
+      <section>
+        <h1>Git via CLI/Terminal</h1>
+
+        <aside class="notes">
+          <p>
+            Er zijn heel wat grafische clients (vb: Sourcetree) maar daardoor weet je eigenlijk niet wat je doet.
+          </p>
+          <p>
+            Wij gaan enkele basis commando's doen, zo gaan we ook verstaan wat je doet.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git init -->
+      <section>
+        <h1><code>git init</code></h1>
+        <p><strong>init</strong>ialize a repository</p>
+
+        <aside class="notes">
+          <p>
+            Git is lokaal, je kan dus perfect lokaal starten zonder internet.
+            Hiermee <em>init</em>ialiseer je dus een nieuwe Git repo
+          </p>
+        </aside>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+        <p>What is the current state?</p>
+
+        <aside class="notes">
+          <p>
+            Dit commando gebruik je zeer veel. Mag je ook oneinding veel doen.
+          </p>
+        </aside>
+      </section>
+
+      <!-- create a single file -->
+      <section>
+        <h1>
+          Create a file:<br />
+          <code>touch 1.txt</code>
+        </h1>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+
+        <aside class="notes">
+          <p>
+            <em>Untracked</em> is een file die niet in Git zit.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git add single file -->
+      <section>
+        <h1><code>git add 1.txt</code></h1>
+        <p>Stage a file by adding it.</p>
+
+        <aside class="notes">
+          <p>
+            Een file toevoegen, zodat die getracked gaat worden bij de volgende commit. Lees: een file toevoegen aan
+            een commit.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+
+        <aside class="notes">
+          <p>
+            <em>New file</em> is een file die bij de volgende commit zal getracked worden
+          </p>
+        </aside>
+      </section>
+
+      <!-- git commit -->
+      <section>
+        <h1><code>git commit -m "Our first commit"</code></h1>
+        <p>Store staged changes</p>
+
+        <aside class="notes">
+          <p>
+            Een commit is een verzameling van changes.
+          </p>
+          <p>
+            Hou je commits klein.
+          </p>
+        </aside>
+      </section>
+
+      <!-- create some files -->
+      <section>
+        <h1>
+          Create some files:<br />
+        </h1>
+        <pre><code data-trim data-noescape>
+          touch 2.txt
+          touch 3.txt
+          mkdir foo
+          touch foo/4.txt
+        </code></pre>
+      </section>
+
+      <!-- git add multiple files-->
+      <section>
+        <h1><code>git add *</code></h1>
+        <p>Stage all</p>
+
+        <aside class="notes">
+          <p>
+            Je kan ook wildcards gebruiken, vb: <code>*.txt</code>
+          </p>
+        </aside>
+      </section>
+
+      <!-- git commit -->
+      <section>
+        <h1><code>git commit -m "Add some files"</code></h1>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+      </section>
+
+      <!-- git log -->
+      <section>
+        <h1><code>git log</code></h1>
+        <p>Show history</p>
+
+        <aside class="notes">
+          <p>
+            Lijst alle commits op, je kan hier eventueel ook details zien via <code>git show $hash</code>
+          </p>
+        </aside>
+      </section>
+
+      <!-- git remote -->
+      <section>
+        <h1><code>git remote add origin https://github.com/anysurfer/<strong>your name</strong>.git</code></h1>
+
+        <aside class="notes">
+          <p>
+            Hiermee laat je weten welke "centrale" server we gaan gebruiken.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git push -->
+      <section>
+        <h1><code>git push -u origin master</code></h1>
+
+        <aside class="notes">
+          <p>
+            Jouw lokale wijzigingen naar Github pushen.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git pull -->
+      <section>
+        <h1><code>git pull origin master</code></h1>
+
+        <aside class="notes">
+          <p>
+            Wijzigingen van andere binnenhalen.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+      </section>
+
+      <!-- create a single file -->
+      <section>
+        <h1>
+          Create a file:<br />
+          <code>touch 7.txt</code>
+        </h1>
+      </section>
+
+      <!-- git add -->
+      <section>
+        <h1><code>git add 7.txt</code></h1>
+      </section>
+
+      <!-- git reset -->
+      <section>
+        <h1><code>git reset 7.txt</code></h1>
+        <p>Unstage a file</p>
+
+        <aside class="notes">
+          <p>
+            Haal de file weg uit de volgende commit.
+          </p>
+        </aside>
+      </section>
+
+      <!-- change -->
+      <section>
+        <h1>
+          Change content for <br /><code>examples/tijs_was_here.txt</code>
+        </h1>
+      </section>
+
+      <!-- git checkout -->
+      <section>
+        <h1><code>git checkout examples/tijs_was_here.txt</code></h1>
+
+        <aside class="notes">
+          <p>
+            Maak de gedane wijzigingen ongedaan.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git branch -->
+      <section>
+        <h1><code>git branch cleanup</code></h1>
+        <p>Work on separate feature</p>
+
+        <aside class="notes">
+          <p>
+            Een "kopie" zodat je makkelijk kan werken
+          </p>
+          <p>
+            In tegenstelling tot SVN geen fysieke kopie.
+          </p>
+        </aside>
+      </section>
+
+      <!-- git checkout branch-->
+      <section>
+        <h1><code>git checkout cleanup</code></h1>
+        <p>Switch to branch</p>
+
+        <p><small>Shortcut: <code>git checkout -b branch-name</code></small></p>
+      </section>
+
+      <!-- git rm -->
+      <section>
+        <h1><code>git rm 1.txt</code></h1>
+        <p>Remove a tracked file</p>
+      </section>
+
+      <!-- git commit -->
+      <section>
+        <h1><code>git commit -m "Remove first file"</code></h1>
+      </section>
+
+      <!-- git checkout branch -->
+      <section>
+        <h1><code>git checkout master</code></h1>
+      </section>
+
+      <!-- git status -->
+      <section>
+        <h1><code>git status</code></h1>
+      </section>
+
+      <!-- git merge -->
+      <section>
+        <h1><code>git merge cleanup</code></h1>
+
+        <aside class="notes">
+          <p>
+            Voeg je "feature" toe aan de master branch
+          </p>
+        </aside>
+      </section>
+
+      <!-- git branch -d -->
+      <section>
+        <h1><code>git branch -d cleanup</code></h1>
+        <p>Delete branch</p>
+      </section>
+    </section>
+
+    <!-- GIT FLOW -->
+
+    <!-- Staging -->
+
+    <!-- Merge & Diff tools -->
+
+    <!-- Questions -->
     <section>
       <h1>Questions?</h1>
+    </section>
+
+    <!-- Useful links -->
+    <section>
+      <h1>Useful links</h1>
+      <ul>
+        <li><a href="https://try.github.io">try.github.io</a></li>
+        <li><a href="https://www.codeschool.com/learn/git">Code School Git courses</a></li>
+        <li><a href="https://git-scm.com/book/en/v2">Pro Git book door Scott Chacon & Ben Straub</a></li>
+        <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></li>
+      </ul>
     </section>
   </div>
 </div>
