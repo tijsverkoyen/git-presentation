@@ -348,10 +348,108 @@
     </section>
 
     <!-- GIT FLOW -->
+    <section id="git-flow">
+      <!-- Intro -->
+      <section>
+        <h1>Git Flow</h1>
+      </section>
 
-    <!-- Staging -->
+      <!-- Special branches -->
+      <section>
+        <h1>Some special branches</h1>
 
-    <!-- Merge & Diff tools -->
+        <ul>
+          <li><code>master</code> == production</li>
+          <li><code>staging</code> == staging</li>
+        </ul>
+
+        <aside class="notes">
+          <p>
+            De code in deze twee branches moet stabiel zijn, kan immers op elk moment gedeployed worden
+          </p>
+          <p>
+            Staging is eigenlijk wat nog niet op productie staat, kan dus al nieuwe features bevatten.
+          </p>
+        </aside>
+      </section>
+
+      <!-- Features and bugfixes -->
+      <section>
+        <h1>New feature or bugfix<br />==<br />branch</h1>
+      </section>
+
+      <!-- Typical flow: develop -->
+      <section>
+        <ol>
+          <li>
+            Create a branch<br />
+            <code>git co -b new-feature</code>
+          </li>
+          <li class="fragment">
+            Develop & Commit<br />
+            <code>git add ...</code><br />
+            <code>git commit ...</code>
+          </li>
+          <li class="fragment">
+            Push the branch<br />
+            <code>git push</code>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Typical flow: code review -->
+      <section>
+        <ol start="4">
+          <li>
+            <a href="https://github.com/tijsverkoyen/git-presentation/compare?expand=1">Create a merge request</a>
+          </li>
+          <li class="fragment">
+            Code review by collegue
+          </li>
+          <li class="fragment">
+            Process feedback
+            <small>(if needed)</small>
+            <br />
+            <code>git add ...</code><br />
+            <code>git commit ...</code><br />
+            <code>git push</code>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Typical flow: code review -->
+      <section>
+        <ol start="7">
+          <li>
+            <a href="https://github.com/tijsverkoyen/git-presentation/pull/1">Merge</a>
+          </li>
+          <li class="fragment">
+            pull<br />
+            <code>git checkout staging</code><br />
+            <code>git pull</code>
+          </li>
+          <li class="fragment">
+            Merge in master branch<br />
+            <code>git checkout master</code><br />
+            <code>git merge staging</code>
+          </li>
+          <li class="fragment">
+            Deploy
+          </li>
+        </ol>
+      </section>
+
+      <!-- Visual flow -->
+      <section>
+        <h1>Flow</h1>
+        <img src="./images/git_flow.png" alt="Git flow diagram">
+        <footer>
+          <small>Source:
+            <a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow">Git Tower</a>
+          </small>
+        </footer>
+      </section>
+    </section>
 
     <!-- Questions -->
     <section data-background-video="./videos/questions_bg.mp4" data-background-video-loop="true" data-background-video-muted="true">
