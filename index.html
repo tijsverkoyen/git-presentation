@@ -144,7 +144,7 @@
 
       <!-- git commit -->
       <section>
-        <h1><code>git commit -m "Our first commit"</code></h1>
+        <h1 class="smaller"><code>git commit -m <br />"Our 1st commit"</code></h1>
         <p>Store staged changes</p>
 
         <aside class="notes">
@@ -159,9 +159,7 @@
 
       <!-- create some files -->
       <section>
-        <h1>
-          Create some files:<br />
-        </h1>
+        <h1>Create some files:</h1>
         <pre><code data-trim data-noescape>
           touch 2.txt
           touch 3.txt
@@ -184,7 +182,7 @@
 
       <!-- git commit -->
       <section>
-        <h1><code>git commit -m "Add some files"</code></h1>
+        <h1 class="smaller"><code>git commit -m <br />"Add some files"</code></h1>
       </section>
 
       <!-- git status -->
@@ -206,7 +204,9 @@
 
       <!-- git remote -->
       <section>
-        <h1><code>git remote add origin https://github.com/anysurfer/<strong>your name</strong>.git</code></h1>
+        <h1 class="smaller">
+          <code>git remote add <br />origin <br />https://github.com/anysurfer/<strong>your_name</strong>.git</code>
+        </h1>
 
         <aside class="notes">
           <p>
@@ -269,14 +269,12 @@
 
       <!-- change -->
       <section>
-        <h1>
-          Change content for <br /><code>examples/tijs_was_here.txt</code>
-        </h1>
+        <h1 class="smaller">Change content for <br /><code>examples/tijs_was_here.txt</code></h1>
       </section>
 
       <!-- git checkout -->
       <section>
-        <h1><code>git checkout examples/tijs_was_here.txt</code></h1>
+        <h1 class="smaller"><code>git checkout examples/tijs_was_here.txt</code></h1>
 
         <aside class="notes">
           <p>
@@ -305,7 +303,9 @@
         <h1><code>git checkout cleanup</code></h1>
         <p>Switch to branch</p>
 
-        <p><small>Shortcut: <code>git checkout -b branch-name</code></small></p>
+        <p>
+          <small>Shortcut: <code>git checkout -b branch-name</code></small>
+        </p>
       </section>
 
       <!-- git rm -->
@@ -316,7 +316,7 @@
 
       <!-- git commit -->
       <section>
-        <h1><code>git commit -m "Remove first file"</code></h1>
+        <h1 class="smaller"><code>git commit -m "Remove 1st file"</code></h1>
       </section>
 
       <!-- git checkout branch -->
@@ -380,8 +380,8 @@
   // - https://github.com/hakimel/reveal.js#dependencies
   Reveal.initialize({
     controlsTutorial: true,
-    history: true,
-    dependencies: [
+    history:          true,
+    dependencies:     [
       {src: 'plugin/notes/notes.js', async: true},
       {src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); }}
     ]
