@@ -17,28 +17,32 @@
 2. Create a file `~/.gitignore`: `touch ~/.gitignore`
 3. Edit this file and add the content below:
 
-    # OS X
-    .DS_Store
-    .idea
-    .Spotlight-V100
-    .Trashes
+````
+# OS X
+.DS_Store
+.idea
+.Spotlight-V100
+.Trashes
     
-    # Windows
-    Desktop.ini
-    Thumbs.db
+# Windows
+Desktop.ini
+Thumbs.db
     
-    # ZendStudio
-    .project
-    .buildpath
-    .settings
+# ZendStudio
+.project
+.buildpath
+.settings
     
-    # PHPStorm
-    .idea
-    
+# PHPStorm
+.idea
+````
+    
 4. Execute the commands below:
 
-    git config --global user.name "Jouw naam"
-    git config --global user.email jouw@emailadres.be
-    git config --global core.excludesfile '~/.gitignore'
-    git config --global alias.co checkout
-    git config --global alias.st status
+````
+git config --global user.name "Jouw naam"
+git config --global user.email jouw@emailadres.be
+git config --global core.excludesfile '~/.gitignore'
+git config --global alias.co checkout
+git config --global alias.st status
+````
