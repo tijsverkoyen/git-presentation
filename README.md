@@ -11,8 +11,3 @@ See the docs for more information:
 
 * [Before the presentation](docs/before_presentation.md)
 * [Demo repo](docs/demo_repo.md)
-
-
-
-
-
